@@ -1,0 +1,19 @@
+<section data-ng-controller="WishlistsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Wishlists</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="wishlist in wishlists" data-ng-href="#!/wishlists/{{wishlist._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="wishlist.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="wishlist.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="wishlist.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!wishlists.$resolved || wishlists.length">
+    	No Wishlists yet, why don't you <a href="/#!/wishlists/create">create one</a>?
+    </div>
+</section>
