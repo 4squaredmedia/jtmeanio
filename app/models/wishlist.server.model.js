@@ -23,7 +23,8 @@ var WishlistSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+	cigars:{[CigarSchema]}
 });
 
 mongoose.model('Wishlist', WishlistSchema);
