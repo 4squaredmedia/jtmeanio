@@ -8,9 +8,10 @@ angular.module('wishlists').controller('WishlistsController', ['$scope', '$state
 		// Create new Wishlist
 		$scope.create = function() {
 			// Create new Wishlist object
+		
 			var wishlist = new Wishlists ({
 				name: this.name,
-				cigars: [brand:this.brand, vitola: this.vitola]
+				cigars: []
 			});
 
 			// Redirect after save

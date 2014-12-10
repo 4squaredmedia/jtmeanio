@@ -32,4 +32,4 @@ var CigarSchema = new Schema({
 	}
 });
 
-mongoose.model('Cigar', CigarSchema);
+mongoose.model('Cigars', CigarSchema);
